@@ -1,0 +1,111 @@
+Ragu.v 191921031 
+Assessment-1 
+
+Set I  
+1. Write a R program to create a vector of a specified type and length.  Create 
+vector of numeric, complex, logical and character types of length 6  with 
+your own examples. print the vector, type, and length. 
+Use this vector for Below program 
+x = c(10, 20, 30, 20, 20, 25, 9, 26,38,40) 
+solution:  
+num_vec <- c(1, 2, 3, 4, 5, 6) 
+cat("Numeric vector:", num_vec, "\nType:", typeof(num_vec),  "\nLength:", length(num_vec), "\n") 
+comp_vec <- c(1+2i, 2+4i, 3+6i, 4+8i, 5+10i, 6+12i) 
+cat("Complex vector:", comp_vec, "\nType:", typeof(comp_vec),  "\nLength:", length(comp_vec), "\n") 
+log_vec <- c(TRUE, FALSE, TRUE, TRUE, FALSE, FALSE) 
+cat("Logical vector:", log_vec, "\nType:", typeof(log_vec),  "\nLength:", length(log_vec), "\n") 
+char_vec <- c("apple", "banana", "orange", "grape", "kiwi",  "watermelon") 
+cat("Character vector:", char_vec, "\nType:", typeof(char_vec),  "\nLength:", length(char_vec), "\n")
+x = c(10, 20, 30, 20, 20, 25, 9, 26, 38, 40) 
+cat("Mean of x:", mean(x), "\n") 
+output:  
+Numeric vector: 1 2 3 4 5 6  
+Type: double  
+Length: 6  
+Complex vector: 1+2i 2+4i 3+6i 4+8i 5+10i 6+12i  
+Type: complex  
+Length: 6  
+Logical vector: TRUE FALSE TRUE TRUE FALSE FALSE  Type: logical  
+Length: 6  
+Character vector: apple banana orange grape kiwi watermelon  Type: character  
+Length: 6  
+Mean of x: 23.8 
+2. Write a R program to find Sum, Mean and Product of a Vector. Solution:  
+my_vector <- c(1, 2, 3, 4, 5) 
+sum_of_vector <- sum(my_vector) 
+mean_of_vector <- mean(my_vector) 
+product_of_vector <- prod(my_vector)
+cat("Sum of vector: ", sum_of_vector, "\n") 
+cat("Mean of vector: ", mean_of_vector, "\n") 
+cat("Product of vector: ", product_of_vector, "\n") 
+output:  
+Sum of vector: 15  
+Mean of vector: 3  
+Product of vector: 120 
+3. Write a R program to sort a Vector in ascending order without sort key  word. 
+Solution:  
+x = c(10, 22, 50, 15, 9, 6) 
+print("Original Vectors:") 
+print(x) 
+print("Sort in ascending order:") 
+print(sort(x)) 
+print("Sort in descending order:") 
+print(sort(x, decreasing=TRUE)) 
+output:  
+[1] "Original Vectors:" 
+[1] 10 22 50 15 9 6 
+[1] "Sort in ascending order:"
+[1] 6 9 10 15 22 50 
+[1] "Sort in descending order:" 
+[1] 50 22 15 10 9 6 
+4. Write a R program to find highest value in a given vector. Solution:  
+x = c(100, 200, 31, 25, 21, 25, 9, 76) 
+print("Original Vectors:") 
+print(x) 
+print("second highest value in given vector:") 
+g= length(x) 
+print(sort(x, partial = g-1)[g-1]) 
+  
+Output:  
+[1] "Original Vectors:" 
+[1]100 200 31 25 21 25 9 76 
+[1] "second highest value in given vector:" 
+[1] 100 
+5. Write a R program to add a new item g4 = &quot;C++&quot; to a given  list. 
+Sample list: (g1 = 5:10, g2 = &quot;R Programming&quot;, g3 =  &quot;HTML&quot;) 
+Solution: 
+g1 <- 5:10 
+g2 <- "R Programming" 
+g3 <- "HTML" 
+mylist <- list(g1, g2, g3) 
+g4 <- "C++" 
+mylist[["g4"]] <- g4 
+print(mylist) 
+output:  
+[[1]] 
+[1]5678910[[2]] 
+[1]"R Programming"[[3]] 
+[1]"HTML"$g4 
+[1]"C++" 
+6. Write a R program to extract all elements except the third element of  the 
+first vector of a given list. 
+Sample list: (g1 = 5:10, g2 = &quot;R Programming&quot;, g3 =  &quot;HTML&quot;) 
+Solution:  
+g1 <- 5:10 
+g2 <- "R Programming" 
+g3 <- "HTML"
+mylist <- list(g1, g2, g3) 
+new_vector <- mylist[[1]][-3] 
+print(new_vector) 
+output:  
+[1] 5 6 89 10 
+7. solution  
+ mons_v <- c("March", "April", "January", "November", "January",  "September", "October","September", "November", "August", "February",  "January", "November", "November", "February", "May", "August",  "February", "July", "December", "August", "August", "September",  "November", "September", "February", "April") 
+months_factor <- factor(mons_v, ordered = TRUE,  
+levels = c("January", "February", "March", "April", "May", "June",  "July", "August", "September", "October", "November", "December")) months_factor 
+Output:  
+[1] March April January November January September  October September November  
+[10] August February January November November  
+February May August February  
+[19] July December August August September November  September February April  
+12 Levels: January < February < March < April < May < June <  July < August < September < october < December
